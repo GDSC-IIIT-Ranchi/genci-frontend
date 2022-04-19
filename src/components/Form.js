@@ -5,7 +5,6 @@ function Form() {
   const { id } = useParams();
   const url=""
   const [allDetail, setDetail] = useState({});
-  useEffect(()=>{
          axios
            .get(url)
            .then((res) => {
@@ -13,7 +12,6 @@ function Form() {
              setDetail(...res.data);
            })
            .catch((err) => console.log(err));
-  },[])
   
   console.log(id);
   return (
