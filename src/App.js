@@ -1,10 +1,15 @@
-import React,{ Component } from "react";
-import { BrowserRouter as Link, Router, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Form from "./components/Form";
 function App() {
   return (
-    <div>
-      Hello world
-    </div>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/certi/:id" element={<Form />}></Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 
