@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 function Form() {
   const { id } = useParams();
-  const url=""
+  const url="http://127.0.0.1:8000/"
   const [allDetail, setDetail] = useState({});
          axios
            .get(url)
