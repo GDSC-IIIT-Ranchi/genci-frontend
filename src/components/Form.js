@@ -1,15 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 function Form() {
   const { id } = useParams();
   const url=""
   const [allDetail, setDetail] = useState({});
-  axios.get(url)
-  .then((res)=>{
-     console.log(res)
-     setDetail(...res.data)
-  }).catch(err=>console.log(err))
+  useEffect(()=>{
+         axios
+           .get(url)
+           .then((res) => {
+             console.log(res);
+             setDetail(...res.data);
+           })
+           .catch((err) => console.log(err));
+  },[])
+  
   console.log(id);
   return (
     <>
