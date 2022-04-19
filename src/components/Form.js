@@ -4,7 +4,15 @@ import axios from "axios";
 function Form() {
   const { id } = useParams();
   const url="http://127.0.0.1:8000/"
-  const [allDetail, setDetail] = useState({});
+  const [allDetail, setDetail] = useState({
+    certificate_url:"",
+    date:"",
+    event_name:"",
+    id:"",
+    name:"",
+
+  });
+  
          axios
            .get(url)
            .then((res) => {
