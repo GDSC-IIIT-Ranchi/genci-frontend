@@ -17,11 +17,11 @@ function Form() {
            .get(url)
            .then((res) => {
              console.log(res);
-             setDetail(...res.data);
+            setDetail({...res.data});
            })
            .catch((err) => console.log(err));
   
-  console.log(id);
+  console.log(allDetail.name);
   return (
     <>
       <div>
