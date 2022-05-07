@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ButtonAppBar from "./navbar/ButtonAppBar";
+import DisplayDetails from "./certificate/DisplayDetails";
+import DisplayStuCerti from "./certificate/DisplayStuCerti";
 
 function DisplayCerti() {
   const { id } = useParams();
@@ -27,13 +29,14 @@ function DisplayCerti() {
     <>
       <div>
         <ButtonAppBar />
-        <div>
-          <h2>{allDetail.name}</h2>
+        <div >
+        
+          <DisplayDetails name={allDetail.name} event_name={allDetail.event_name} date={allDetail.date} />
+          {/* <h2>{allDetail.name}</h2>
           <h2>{allDetail.event_name}</h2>
-          <h2>{allDetail.date}</h2>
-        </div>
-        <div>
-          <img src={allDetail.certificate_url}></img>
+          <h2>{allDetail.date}</h2> */}
+        <DisplayStuCerti url={allDetail.certificate_url} />
+        
         </div>
       </div>
     </>
