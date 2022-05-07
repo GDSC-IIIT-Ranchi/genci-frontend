@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import axios from 'axios';
 
 function Show_certi() {
+    
    const[id , setId] = useState()
   
   const check_availability = ()=>{
