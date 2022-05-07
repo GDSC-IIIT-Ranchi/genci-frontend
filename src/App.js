@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Form from "./components/Form";
+import DisplayCerti from "./components/DisplayCerti";
 function App() {
   return (
     <>
       <Router>
         <Routes>
-          <Route path="/certi/:id" element={<Form />}></Route>
+          <Route path="/certi/:id" element={<DisplayCerti />}></Route>
         </Routes>
       </Router>
     </>
