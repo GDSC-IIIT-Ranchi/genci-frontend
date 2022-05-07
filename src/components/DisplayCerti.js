@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import ButtonAppBar from "./ButtonAppBar";
+import ButtonAppBar from "./navbar/ButtonAppBar";
 
-function Form() {
+function DisplayCerti() {
   const { id } = useParams();
   const url = "http://127.0.0.1:8000/";
   const [allDetail, setDetail] = useState({
@@ -40,4 +40,4 @@ function Form() {
   );
 }
 
-export default Form;
+export default DisplayCerti;
