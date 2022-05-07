@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import ButtonAppBar from "./navbar/ButtonAppBar";
@@ -17,15 +17,15 @@ function DisplayCerti() {
     name: "",
   });
 
-  axios
-    .get(url)
-    .then((res) => {
-      console.log(res);
-      setDetail({ ...res.data });
-    })
-    .catch((err) => console.log(err));
+  useEffect(() => {
+    axios
+      .get(url)
+      .then((res) => {
+        setDetail({ ...res.data });
+      })
+      .catch((err) => console.log(err));
+  }, [setDetail]);
 
-  console.log(allDetail.name);
   return (
     <>
       <div>

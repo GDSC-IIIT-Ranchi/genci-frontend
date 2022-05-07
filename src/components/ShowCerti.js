@@ -11,7 +11,6 @@ function Show_certi() {
   }
   const check_availability = () => {
     axios.post(url, {
-      
     });
   };
 
