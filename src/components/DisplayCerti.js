@@ -4,6 +4,7 @@ import axios from "axios";
 import ButtonAppBar from "./navbar/ButtonAppBar";
 import DisplayDetails from "./certificate/DisplayDetails";
 import DisplayStuCerti from "./certificate/DisplayStuCerti";
+import { Grid } from "@mui/material";
 
 function DisplayCerti() {
   const { id } = useParams();
@@ -29,15 +30,18 @@ function DisplayCerti() {
     <>
       <div>
         <ButtonAppBar />
-        <div >
-        
-          <DisplayDetails name={allDetail.name} event_name={allDetail.event_name} date={allDetail.date} />
-          {/* <h2>{allDetail.name}</h2>
-          <h2>{allDetail.event_name}</h2>
-          <h2>{allDetail.date}</h2> */}
-        <DisplayStuCerti url={allDetail.certificate_url} />
-        
-        </div>
+        <Grid container spacing={0}>
+          <Grid item md={4}>
+            <DisplayDetails
+              name={allDetail.name}
+              event_name={allDetail.event_name}
+              date={allDetail.date}
+            />
+          </Grid>
+          <Grid item md={6}>
+            <DisplayStuCerti url={allDetail.certificate_url} />
+          </Grid>
+        </Grid>
       </div>
     </>
   );

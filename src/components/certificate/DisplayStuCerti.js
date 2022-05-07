@@ -2,8 +2,8 @@ import React from 'react'
 
 function DisplayStuCerti({url}) {
   return (
-        <div>
-          <img src={url}></img>
+        <div className='imageBox'>
+          <img src={url} className="image"></img>
         </div>
   )
 }
