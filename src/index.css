@@ -30,7 +30,8 @@ code {
 
 .design{
   margin-top: 300px;
-  margin-left: 20px;
+  margin-left: 40px;
+  padding: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
